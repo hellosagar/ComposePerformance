@@ -10,6 +10,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import com.ramcosta.composedestinations.annotation.Destination
 
 /**
  * ISSUE: Composable is taking a lambda as param and inside that param accessing the unstable
@@ -20,6 +21,7 @@ import androidx.compose.ui.Modifier
  * 2. Remembered Lambdas.
  */
 @Composable
+@Destination
 fun LambdaExample() {
   val viewModel = remember {
     LambdaViewModel()

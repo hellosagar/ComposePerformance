@@ -2,18 +2,20 @@
 plugins {
   alias(libs.plugins.androidApplication)
   alias(libs.plugins.kotlinAndroid)
+  id("com.google.devtools.ksp") version "1.8.10-1.0.9"
 }
 
 android {
   namespace = "dev.sagar.composeperformance"
-  compileSdk = 33
+  compileSdk = 34
 
   defaultConfig {
     applicationId = "dev.sagar.composeperformance"
     minSdk = 24
-    targetSdk = 33
+    targetSdk = 34
     versionCode = 1
     versionName = "1.0"
+    multiDexEnabled = true
 
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     vectorDrawables {
@@ -28,11 +30,11 @@ android {
     }
   }
   compileOptions {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
   }
   kotlinOptions {
-    jvmTarget = "1.8"
+    jvmTarget = "17"
   }
   buildFeatures {
     compose = true
@@ -75,4 +77,8 @@ dependencies {
 
   // Kotlin coroutines core
   implementation(libs.coroutines.core)
+
+  // Easy navigation
+  implementation("io.github.raamcosta.compose-destinations:core:1.9.52")
+  ksp("io.github.raamcosta.compose-destinations:ksp:1.9.52")
 }

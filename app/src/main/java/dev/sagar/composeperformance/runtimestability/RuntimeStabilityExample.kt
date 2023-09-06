@@ -1,4 +1,4 @@
-package dev.sagar.composeperformance
+package dev.sagar.composeperformance.runtimestability
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -12,8 +12,18 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.ramcosta.composedestinations.annotation.Destination
 
+/**
+ * ISSUE: Composable is taking ContactInfo type as param which is unstable because it's params are
+ * defined as "var" which means it's mutable, and can be changed at runtime. So, its runtime stability
+ * is Unstable and thus makes the composable non-skippable.
+ *
+ * SOLUTION:
+ * 1. Make your param as "val" instead of "var
+ */
 @Composable
+@Destination
 fun RuntimeStabilityExample() {
   var isChecked by remember {
     mutableStateOf(false)
@@ -38,7 +48,20 @@ private fun Contact(contact: ContactInfo) {
   }
 }
 
+// ISSUE: Params are defined as "var" which means it's mutable, and can be changed at runtime.
 private data class ContactInfo(
   var name: String,
   var number: Int,
 )
+
+
+/*
+ Compiler generated anonymous class code from lambda.
+ -----------------------------------------------------------------------------------
+  unstable class ContactInfo {
+    stable var name: String
+    stable var number: Int
+    <runtime stability> = Unstable
+  }
+ -----------------------------------------------------------------------------------
+*/

@@ -16,8 +16,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
+import com.ramcosta.composedestinations.annotation.Destination
 import dev.sagar.composeperformance.ui.theme.ComposePerformanceTheme
 
 /**
@@ -32,6 +32,7 @@ import dev.sagar.composeperformance.ui.theme.ComposePerformanceTheme
  * 
  */
 @Composable
+@Destination
 fun LayoutExample() {
   var isShown by remember {
     mutableStateOf(false)
@@ -50,16 +51,6 @@ fun LayoutExample() {
     Text(
       text = "Hello #1",
       modifier = Modifier.offset(x = offset.dp, y = offset.dp)
-    )
-    // Optimized
-    Text(
-      text = "Hello #2",
-      modifier = Modifier.offset {
-        // The `offsetX` state is read in the placement step
-        // of the layout phase when the offset is calculated.
-        // Changes in `offsetX` restart the layout.
-        IntOffset(offset, offset)
-      }
     )
   }
 }

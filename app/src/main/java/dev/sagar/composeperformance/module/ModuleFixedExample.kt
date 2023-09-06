@@ -13,7 +13,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import dev.sagar.domain.ContactInfo
+import com.ramcosta.composedestinations.annotation.Destination
 import dev.sagar.domainfixed.ContactInfoFixed
 
 /**
@@ -24,6 +24,7 @@ import dev.sagar.domainfixed.ContactInfoFixed
  * - Mark the class Stable using the annotation(s) here in that case @Immutable
  */
 @Composable
+@Destination
 fun ModuleFixedExample() {
   var isChecked by remember {
     mutableStateOf(false)

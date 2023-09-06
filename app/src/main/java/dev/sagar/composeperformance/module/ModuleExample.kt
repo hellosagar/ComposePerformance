@@ -13,6 +13,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.ramcosta.composedestinations.annotation.Destination
 import dev.sagar.domain.ContactInfo
 
 /**
@@ -27,6 +28,7 @@ import dev.sagar.domain.ContactInfo
  * However it will just be the dependency for the compose runtime and not for Compose-UI.
  */
 @Composable
+@Destination
 fun ModuleExample() {
   println("ModuleExample")
   var isChecked by remember {

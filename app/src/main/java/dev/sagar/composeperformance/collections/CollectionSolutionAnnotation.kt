@@ -13,6 +13,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.ramcosta.composedestinations.annotation.Destination
 
 /**
  * Composable demonstrating how to stabilize the param i.e Collection type (List<T>, Set<T>, etc)
@@ -37,6 +38,7 @@ import androidx.compose.ui.unit.dp
  *
  */
 @Composable
+@Destination
 fun CollectionExampleSolutionAnnotation() {
   var isChecked by remember {
     mutableStateOf(false)
@@ -89,11 +91,11 @@ private data class ContactInfoOne(
   val number: Int,
 )
 /*
- Compiler report(s)
+` Compiler report(s)
   -----------------------------------------------------------------------------------
   restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun Contacts(
     stable contacts: ContactInfoOneList
-  )
+  )`
   -----------------------------------------------------------------------------------
  */
 

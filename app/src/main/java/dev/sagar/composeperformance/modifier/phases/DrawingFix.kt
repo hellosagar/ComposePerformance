@@ -31,7 +31,7 @@ import dev.sagar.composeperformance.ui.theme.ComposePerformanceTheme
  */
 @Composable
 @Destination
-fun DrawingExample() {
+fun DrawingFix() {
   var isShown by remember {
     mutableStateOf(false)
   }
@@ -46,8 +46,8 @@ fun DrawingExample() {
       Text(text = "Toggle Text")
     }
 
-    // Unoptimized
-    Text(text = "Hello World! #1", modifier = Modifier.alpha(opacity))
+    // Optimized
+    Text(text = "Hello World! #2", modifier = Modifier.graphicsLayer { alpha = opacity })
   }
 }
 

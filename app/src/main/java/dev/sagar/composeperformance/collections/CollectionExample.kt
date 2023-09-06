@@ -13,6 +13,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.ramcosta.composedestinations.annotation.Destination
 
 /**
  * ISSUE: Composable is taking a List<T> (Collection Type) as param which is a interface. The Compose compiler cannot be
@@ -24,6 +25,7 @@ import androidx.compose.ui.unit.dp
  * 2. Use a data class annotated with stable annotation wrapping a List.
  */
 @Composable
+@Destination
 fun CollectionExample() {
   var isChecked by remember {
     mutableStateOf(false)

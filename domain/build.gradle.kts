@@ -6,7 +6,11 @@ plugins {
 
 android {
   namespace = "dev.sagar.domain"
-  compileSdk = 33
+  compileSdk = 34
+
+  defaultConfig {
+    multiDexEnabled = true
+  }
 
   buildTypes {
     release {

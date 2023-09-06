@@ -10,6 +10,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import com.ramcosta.composedestinations.annotation.Destination
 
 /**
  * Example demonstrating how to stabilize the lambda param using the method reference.
@@ -19,6 +20,7 @@ import androidx.compose.ui.Modifier
  * - Method references are @Stable functional types
  */
 @Composable
+@Destination
 fun LambdaExampleMethodReference() {
 
   val viewModel: LambdaViewModel = remember {

@@ -12,6 +12,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.ramcosta.composedestinations.annotation.Destination
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
 
@@ -33,6 +34,7 @@ import kotlinx.collections.immutable.persistentListOf
  * kotlinx.collections.ImmutableList<T> as stable.
  */
 @Composable
+@Destination
 fun CollectionSolutionKotlinx() {
   var isChecked by remember {
     mutableStateOf(false)
