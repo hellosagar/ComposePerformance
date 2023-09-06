@@ -1,6 +1,3 @@
-![Screen Recording 2023-09-06 at 11 33 28 PM](https://github.com/hellosagar/ComposePerformance/assets/50016799/9f488fea-dd8c-4f24-901e-f9b1726dbbb7)# ComposePerformance
-This project is the sample project from the 3 article series for the compose performance.
-
 ### Idea
 This project explains how to remove unwanted recompositions and it contains isolated examples that will help you to understand them and then apply the optimizations in your project :)
 
