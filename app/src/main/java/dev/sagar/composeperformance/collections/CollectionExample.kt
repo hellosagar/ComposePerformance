@@ -17,7 +17,8 @@ import com.ramcosta.composedestinations.annotation.Destination
 
 /**
  * ISSUE: Composable is taking a List<T> (Collection Type) as param which is a interface. The Compose compiler cannot be
- * sure of the immutability of this class as it just sees the declared type and as such declares it as unstable.
+ * sure of the immutability of this class as it just sees the declared type and as such declares it as unstable as
+ * implementation could still be mutable.
  *
  *
  * SOLUTION:
