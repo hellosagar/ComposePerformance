@@ -81,4 +81,6 @@ dependencies {
   // Easy navigation
   implementation("io.github.raamcosta.compose-destinations:core:1.9.52")
   ksp("io.github.raamcosta.compose-destinations:ksp:1.9.52")
+
+  lintChecks("com.slack.lint.compose:compose-lint-checks:1.2.0")
 }
