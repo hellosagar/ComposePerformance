@@ -34,27 +34,14 @@ fun ModuleExample() {
   var isChecked by remember {
     mutableStateOf(false)
   }
-  val contacts: List<ContactInfo> = remember {
-    mutableStateListOf(
-      ContactInfo(name = "Sagar", number = 1234567890),
-      ContactInfo(name = "Khurana", number = 1234567890),
-      ContactInfo(name = "Foo", number = 1234567890),
-    )
-  }
   Column(
     modifier = Modifier
   ) {
     Checkbox(checked = isChecked, onCheckedChange = {
       isChecked = it
     })
-    ContactsModule(contacts = contacts)
-  }
-}
+    ContactModule(contact = ContactInfo(name = "Sagar", number = 1234567890))
 
-@Composable
-private fun ContactsModule(contacts: List<ContactInfo>){
-  contacts.forEach { contact ->
-    ContactModule(contact = contact)
   }
 }
 

@@ -29,27 +29,13 @@ fun ModuleFixedExample() {
   var isChecked by remember {
     mutableStateOf(false)
   }
-  val contacts: List<ContactInfoFixed> = remember {
-    mutableStateListOf(
-      ContactInfoFixed(name = "Sagar", number = 1234567890),
-      ContactInfoFixed(name = "Khurana", number = 1234567890),
-      ContactInfoFixed(name = "Foo", number = 1234567890),
-    )
-  }
   Column(
     modifier = Modifier
   ) {
     Checkbox(checked = isChecked, onCheckedChange = {
       isChecked = it
     })
-    ContactsModuleFixed(contacts = contacts)
-  }
-}
-
-@Composable
-private fun ContactsModuleFixed(contacts: List<ContactInfoFixed>){
-  contacts.forEach { contact ->
-    ContactModuleFixed(contact = contact)
+    ContactModuleFixed(contact = ContactInfoFixed(name = "Sagar", number = 1234567890))
   }
 }
 

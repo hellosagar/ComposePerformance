@@ -9,11 +9,13 @@ true // Needed to make the Suppress annotation work for the plugins block
 subprojects {
   tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
     kotlinOptions {
-      freeCompilerArgs += listOf(
-        "-P",
-        "plugin:androidx.compose.compiler.plugins.kotlin:metricsDestination=" +
-          project.buildDir.absolutePath + "/compose_compiler"
-      )
+      if (project.findProperty("enableComposeCompilerReports") == "true") {
+        freeCompilerArgs += listOf(
+          "-P",
+          "plugin:androidx.compose.compiler.plugins.kotlin:metricsDestination=" +
+            project.buildDir.absolutePath + "/compose_compiler"
+        )
+      }
       freeCompilerArgs += listOf(
         "-P",
         "plugin:androidx.compose.compiler.plugins.kotlin:reportsDestination=" +

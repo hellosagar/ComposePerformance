@@ -68,6 +68,10 @@ private fun Contacts(contacts: ContactInfoOneList) {
     Contact(contact = contact)
   }
 }
+@Immutable
+private data class ContactInfoOneList(
+  val contacts: List<ContactInfoOne>
+)
 
 @Composable
 private fun Contact(contact: ContactInfoOne) {
@@ -81,10 +85,7 @@ private fun Contact(contact: ContactInfoOne) {
 /**
  * Data class annotated with stable annotation wrapping a List.
  */
-@Immutable
-private data class ContactInfoOneList(
-  val contacts: List<ContactInfoOne>
-)
+
 
 private data class ContactInfoOne(
   val name: String,
@@ -95,7 +96,7 @@ private data class ContactInfoOne(
   -----------------------------------------------------------------------------------
   restartable skippable scheme("[androidx.compose.ui.UiComposable]") fun Contacts(
     stable contacts: ContactInfoOneList
-  )`
+  )
   -----------------------------------------------------------------------------------
  */
 
