@@ -39,5 +39,5 @@ Each concept is a group by a package within which it contains one bug code and o
 In each class, it contains a class header that explains the `ISSUE` and the possible `SOLUTIONS`
 <img width="712" alt="266145111-ed067a11-be6c-4190-9fae-4fa16b64a862" src="https://github.com/hellosagar/ComposePerformance/assets/50016799/de7683d9-41eb-4be3-a6da-3a60bc257a27">
 
-Special Thanks to [PhilippNowak96](https://github.com/PhilippNowak96) [hi-manshu](https://github.com/hi-manshu), [PatilShreyas](https://github.com/PatilShreyas) and [skydoves](https://github.com/skydoves) for helping me during the process 🙏
+Special Thanks to [PhilippNowak96](https://github.com/PhilippNowak96), [hi-manshu](https://github.com/hi-manshu), [PatilShreyas](https://github.com/PatilShreyas) and [skydoves](https://github.com/skydoves) for helping me during the process 🙏
 
