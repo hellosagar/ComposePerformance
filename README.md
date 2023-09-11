@@ -6,7 +6,9 @@ This project explains how to remove unwanted recompositions and it contains isol
 
 ### Where to start
 Run the app and it contains a lot of button(s). Now what does that mean? Each item in a column shows a concept, and within that item, there are multiple buttons. The first button will take you to the buggy code and the following button is the possible solution to fix that buggy code. 
-<img width="310" alt="Screenshot 2023-09-06 at 11 19 41 PM" src="https://github.com/hellosagar/ComposePerformance/assets/50016799/99231955-aae8-4089-b6c4-09f342b3c7b6">
+<img width="310" alt="266143856-99231955-aae8-4089-b6c4-09f342b3c7b6" src="https://github.com/hellosagar/ComposePerformance/assets/50016799/d1ce8460-900f-43f8-98d1-e3b214e26acd">
+
+ 
 
 ### How to observe recompositions
 1. Run the app
@@ -20,7 +22,8 @@ Run the app and it contains a lot of button(s). Now what does that mean? Each it
 Video Sample doing the steps above
 
 
-![Screen Recording 2023-09-06 at 11 33 28 PM](https://github.com/hellosagar/ComposePerformance/assets/50016799/c696f731-5e8a-4345-ace4-e018a83d0e8c)
+![266147274-c696f731-5e8a-4345-ace4-e018a83d0e8c](https://github.com/hellosagar/ComposePerformance/assets/50016799/7ca1ca6f-2ebe-4a0a-aaae-ae3d4a20ae4e)
+
 
 
 
@@ -29,9 +32,11 @@ Each concept is a group by a package within which it contains one bug code and o
 - `CollectionExample`: Buggy code with unwanted recompositions
 - `CollectionExampleSolutionAnnotation`: Solution #1
 - `CollectionSolutionKotlinx`: Solution #2
-<img width="419" alt="Screenshot 2023-09-06 at 11 20 37 PM" src="https://github.com/hellosagar/ComposePerformance/assets/50016799/fee24b53-1dda-4ff1-ba6d-c4e76538499a">
+<img width="419" alt="266144011-fee24b53-1dda-4ff1-ba6d-c4e76538499a" src="https://github.com/hellosagar/ComposePerformance/assets/50016799/762ca114-e7d5-44ca-b1f5-d6b1e0b68d3a">
+
 
 ### What's inside class
 In each class, it contains a class header that explains the `ISSUE` and the possible `SOLUTIONS`
-<img width="712" alt="Screenshot 2023-09-06 at 11 26 04 PM" src="https://github.com/hellosagar/ComposePerformance/assets/50016799/ed067a11-be6c-4190-9fae-4fa16b64a862">
+<img width="712" alt="266145111-ed067a11-be6c-4190-9fae-4fa16b64a862" src="https://github.com/hellosagar/ComposePerformance/assets/50016799/de7683d9-41eb-4be3-a6da-3a60bc257a27">
+
 
